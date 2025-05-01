@@ -1,4 +1,4 @@
-from agents import Agent,Runner,OpenAIChatCompletionsModel,AsyncOpenAI,RunConfig
+from agents import Agent,Runner,OpenAIChatCompletionsModel,AsyncOpenAI,RunConfig,enable_verbose_stdout_logging
 from openai.types.responses import ResponseTextDeltaEvent
 from dotenv import load_dotenv,find_dotenv
 import os
@@ -9,6 +9,8 @@ from langsmith import traceable
 # Load environment variables from .env file
 _:bool=load_dotenv(find_dotenv())
 
+
+# enable_verbose_stdout_logging()
 GEMINI_API_KEY=os.getenv("GEMINI_API_KEY")
 
 
